@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Avaliation {
 
   /**
-   *
+   * Método para adicionar as informações de input.
    */
   public void inputData() {
 
@@ -31,14 +31,13 @@ public class Avaliation {
     }
     scanner.close();
 
-    for (int w: weightActivity) {
+    for (int w : weightActivity) {
       sum += w;
     }
 
     if (sum != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
     }
-
 
     double average;
     double sumWeightGrade = 0;
@@ -51,9 +50,16 @@ public class Avaliation {
     average = sumWeightGrade / weightSumDouble;
 
     if (average >= 85.0) {
-      System.out.println("Parabéns! Você alcançou " + average + "%! E temos o prazer de informar que você obteve aprovação!");
+      System.out.println(
+          "Parabéns! Você alcançou "
+              + average
+              +
+              "%! E temos o prazer de informar que você obteve aprovação!"
+      );
     } else {
-      System.out.println("Lamentamos informar que, com base na sua pontuação alcançada neste período, " + average + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
+      System.out.println(
+          "Lamentamos informar que, com base na sua pontuação alcançada neste período, " + average
+              + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
     }
   }
 }
