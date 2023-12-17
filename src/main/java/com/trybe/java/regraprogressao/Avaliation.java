@@ -38,5 +38,22 @@ public class Avaliation {
     if (sum != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
     }
+
+
+    double average;
+    double sumWeightGrade = 0;
+    double weightSumDouble = sum;
+
+    for (int i = 0; i < weightActivity.length; i++) {
+      sumWeightGrade += weightActivity[i] * gradeObtained[i];
+    }
+
+    average = sumWeightGrade / weightSumDouble;
+
+    if (average >= 85.0) {
+      System.out.println("Parabéns! Você alcançou " + average + "%! E temos o prazer de informar que você obteve aprovação!");
+    } else {
+      System.out.println("Lamentamos informar que, com base na sua pontuação alcançada neste período, " + average + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
+    }
   }
 }
